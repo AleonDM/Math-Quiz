@@ -11,10 +11,10 @@ int main() {
     int score = 0; 
     char playAgain;
 
-    do {
+    while (true) {
         
-        int num1 = rand() % 10 + 1;
-        int num2 = rand() % 10 + 1;
+        int num1 = rand() % 1000 + 1;
+        int num2 = rand() % 1000 + 1;
 
         char operation;
         if (rand() % 2 == 0) {
@@ -47,14 +47,10 @@ int main() {
             cout << "Игра окончена! Ваш счет: " << score << endl;
             break; 
         }
-        
-        cout << "Хотите продолжить? (y/n): ";
-        cin >> playAgain;
 
-    } while (playAgain == 'y' || playAgain == 'Y');
+    }
 
     cout << "Ваш финальный счет: " << score << endl;
 
     return 0;
 }
-
